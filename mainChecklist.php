@@ -17,41 +17,41 @@
 	</div>
 
 	<form class="form-horizontal" role="form" method="post">
-	<table class="table">
-	  <thead>
-	    <tr>
-	      <th>Week day</th>
-	      <th>User 1</th>
-	      <th>User 2</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	    <tr>
-	      <th scope="row">Monday</th>
-	      <td><input class="form-check-input" type="checkbox" id="user1task2" value="user1task1"> Task Monday</td>
-	      <td><input class="form-check-input" type="checkbox" id="user2task2" value="user1task1"> Task Monday</td>
-	    </tr>
-	    <tr>
-	      <th scope="row">Tuesday</th>
-	      <td><input class="form-check-input" type="checkbox" id="user1task2" value="user1task2"> Task Tuesday</td>
-	      <td><input class="form-check-input" type="checkbox" id="user2task2" value="user1task2"> Task Tuesday</td>
-	    </tr>
-	    <tr>
-	      <th scope="row">Wednesday</th>
-	      <td><input class="form-check-input" type="checkbox" id="user1task3" value="user1task3"> Task Wednesday</td>
-	      <td><input class="form-check-input" type="checkbox" id="user2task3" value="user1task3"> Task Wednesday</td>
-	    </tr>
-	    <tr>
-	      <th scope="row">Thursday</th>
-	      <td><input class="form-check-input" type="checkbox" id="user1task4" value="user1task4"> Task Thursday</td>
-	      <td><input class="form-check-input" type="checkbox" id="user2task4" value="user1task4"> Task Thursday</td>
-	    </tr>
-	    <tr>
-	      <th scope="row">Friday</th>
-	      <td><input class="form-check-input" type="checkbox" id="user1task5" value="user1task4"> Task Friday</td>
-	      <td><input class="form-check-input" type="checkbox" id="user2task5" value="user1task4"> Task Friday</td>
-	    </tr>	   
-	  </tbody>
-	</table>
+		<table class="table">
+		  <thead>
+		    <tr>
+		      <th>Week day</th>
+		      <th>Myself</th>
+		      <th>My partner</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <th scope="row">Monday</th>
+		      <td><input class="form-check-input" type="checkbox" id="user1task2" value="user1task1"> Task Monday</td>
+		      <td><input class="form-check-input" type="checkbox" id="user2task2" value="user1task1"> Task Monday</td>
+		    </tr>
+		    <tr>
+		      <th scope="row">Tuesday</th>
+		      <td><input class="form-check-input" type="checkbox" id="user1task2" value="user1task2"> Task Tuesday</td>
+		      <td><input class="form-check-input" type="checkbox" id="user2task2" value="user1task2"> Task Tuesday</td>
+		    </tr>
+		    <tr>
+		      <th scope="row">Wednesday</th>
+		      <td><input class="form-check-input" type="checkbox" id="user1task3" value="user1task3"> Task Wednesday</td>
+		      <td><input class="form-check-input" type="checkbox" id="user2task3" value="user1task3"> Task Wednesday</td>
+		    </tr>
+		    <tr>
+		      <th scope="row">Thursday</th>
+		      <td><input class="form-check-input" type="checkbox" id="user1task4" value="user1task4"> Task Thursday</td>
+		      <td><input class="form-check-input" type="checkbox" id="user2task4" value="user1task4"> Task Thursday</td>
+		    </tr>
+		    <tr>
+		      <th scope="row">Friday</th>
+		      <td><input class="form-check-input" type="checkbox" id="user1task5" value="user1task4"> Task Friday</td>
+		      <td><input class="form-check-input" type="checkbox" id="user2task5" value="user1task4"> Task Friday</td>
+		    </tr>	   
+		  </tbody>
+		</table>
 	</form>	
 </html>
