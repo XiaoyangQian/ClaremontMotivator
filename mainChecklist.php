@@ -72,6 +72,8 @@
 							 </tr>';
 					}
 				}
+				$task_select->free_result();
+				$task_select->close();
 			?>	   
 		  </tbody>
 		</table>
