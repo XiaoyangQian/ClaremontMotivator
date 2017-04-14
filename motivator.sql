@@ -9,6 +9,8 @@ CREATE TABLE Users (
 	firstname VARCHAR(256) NOT NULL,
 	lastname VARCHAR(256) NOT NULL,
 	school VARCHAR(256) NOT NULL,
+	phonenumber INT UNSIGNED NOT NULL
+	email NOT NULL
 	partner_id INT UNSIGNED,
 	FOREIGN KEY (partner_id) REFERENCES Users(user_id)
 );
