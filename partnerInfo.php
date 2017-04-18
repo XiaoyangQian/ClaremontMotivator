@@ -16,11 +16,10 @@
 			
 			<table>
 			<?php
-				include("dbconn.php");
+			include("dbconn.php");
 				$dbc = connect_to_db("motivator");
 				// [TODO] switch to get later
 				$user_id = 1;
-				// Find pair id
 				$partner_select = $dbc->prepare("SELECT partner_id FROM users 
 													WHERE user_id=?");
 				$partner_select->bind_param("i", $user_id);
@@ -40,7 +39,7 @@
 				$fname_select->execute();
 				$fname_select->bind_result($firstname);
 				if($fname_select->fetch()){
-					echo "<tr><td>First Name: </td><td> $firstname </td></tr>"
+					echo "<tr><td>First Name: </td><td> $firstname </td></tr>";
 				} else{
 					echo 'nay';
 				}
@@ -52,7 +51,7 @@
 				$lname_select->execute();
 				$lname_select->bind_result($lastname);
 				if($lname_select->fetch()){
-					echo "<tr><td>Last Name:</td><td>$lastname</td></tr>"
+					echo "<tr><td>Last Name:</td><td>$lastname</td></tr>";
 				} else{
 					echo 'nay';
 				}
@@ -64,7 +63,7 @@
 				$school_select->execute();
 				$school_select->bind_result($school);
 				if($school_select->fetch()){
-					echo "<tr><td>College:</td><td>$school</td></tr>"
+					echo "<tr><td>College:</td><td>$school</td></tr>";
 				} else{
 					echo 'nay';
 				}
@@ -77,7 +76,7 @@
 				$phone_select->execute();
 				$phone_select->bind_result($phonenumber);
 				if($phone_select->fetch()){
-					echo "<tr><td>Phone Number:</td><td>$phonenumber</td></tr>"
+					echo "<tr><td>Phone Number:</td><td>$phonenumber</td></tr>";
 				} else{
 					echo 'nay';
 				}
@@ -89,13 +88,13 @@
 				$email_select->execute();
 				$email_select->bind_result($email);
 				if($email_select->fetch()){
-					echo "<tr><td>Email:</td><td>$email</td></tr>"
+					echo "<tr><td>Email:</td><td>$email</td></tr>";
 				} else{
 					echo 'nay';
 				}
 				$email_select->free_result();
 				$email_select->close();	
-			?>	   	
+			?>
 			</table>
 			<a href="./mainChecklist.php" class="btn btn-primary" role="button">Continue!</a>
 
