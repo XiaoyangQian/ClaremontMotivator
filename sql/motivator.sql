@@ -41,7 +41,12 @@ INSERT INTO Tasks (week, weekday, user_id, task) VALUES (2017-04-09, 'Sun.', 1, 
 INSERT INTO Tasks (week, weekday, user_id, task) VALUES (2017-04-09, 'Sun.', 2, 'i-festival');
 INSERT INTO Tasks (week, weekday, user_id, task) VALUES (2017-04-09, 'Mon.', 1, 'underwater basket weaving');
 INSERT INTO Tasks (week, weekday, user_id, task) VALUES (2017-04-09, 'Mon.', 2, 'procrastinating');
+INSERT INTO Tasks (week, weekday, user_id, task) VALUES (2017-04-09, 'Tue.', 1, 'rehersal');
+INSERT INTO Tasks (week, weekday, user_id, task) VALUES (2017-04-09, 'Tue.', 2, 'sky-diving');
 INSERT INTO Tasks (week, weekday, user_id, task) VALUES (2017-04-09, 'Wed.', 1, 'rehersal');
 INSERT INTO Tasks (week, weekday, user_id, task) VALUES (2017-04-09, 'Wed.', 2, 'sky-diving');
-
+INSERT INTO Tasks (week, weekday, user_id, task) VALUES (2017-04-09, 'Thur.', 1, 'homework');
+INSERT INTO Tasks (week, weekday, user_id, task) VALUES (2017-04-09, 'Thur.', 2, 'CS');
+INSERT INTO Tasks (week, weekday, user_id, task) VALUES (2017-04-09, 'Fri.', 1, 'be productive');
+INSERT INTO Tasks (week, weekday, user_id, task) VALUES (2017-04-09, 'Fri.', 2, 'not be productive');
 
