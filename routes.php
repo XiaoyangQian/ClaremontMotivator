@@ -8,6 +8,9 @@
       case 'checklist':
         require_once('model/task.php');
         $controller = new ChecklistController();
+      case 'partnerInfo':
+        require_once('model/info.php')
+        $controller = new PartnerInfoController();
       break;
     }
     // call the action
@@ -16,7 +19,7 @@
 
   // just a list of the controllers we have and their actions
   // we consider those "allowed" values
-  $controllers = array('checklist' => ['list', 'error']);
+  $controllers = array('checklist' => ['list', 'error'], 'partnerInfo' => ['list']);
 
   // check that the requested controller and action are both allowed
   // if someone tries to access something else he will be redirected to the error action of the pages controller
