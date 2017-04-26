@@ -13,11 +13,11 @@
 			$partner_select->bind_result($partner_id);
 				
 			if ($partner_select->fetch()) {
-				echo 'yay'.$partner_id;
+				$infoList["partner_id"] = $partner_id;
 			} else {
 				echo 'nay';
 			}
-			$infoList["partner_id"] = $partner_id;
+			
 			$partner_select->free_result();
 			$partner_select->close();
 
@@ -26,11 +26,11 @@
 			$fname_select->execute();
 			$fname_select->bind_result($firstname);
 			if($fname_select->fetch()){
-				echo "<tr><td>First Name: </td><td> $firstname </td></tr>";
+				$infoList["partner_firstname"] = $firstname;
 			} else{
 				echo 'nay';
 			}
-			$infoList["partner_firstname"] = $firstname;
+			
 			$fname_select->free_result();
 			$fname_select->close();
 
@@ -39,11 +39,11 @@
 			$lname_select->execute();
 			$lname_select->bind_result($lastname);
 			if($lname_select->fetch()){
-				echo "<tr><td>Last Name:</td><td>$lastname</td></tr>";
+				$infoList["partner_lastname"] = $lastname;
 			} else{
 				echo 'nay';
 			}
-			$infoList["partner_lastname"] = $lastname;
+			
 			$lname_select->free_result();
 			$lname_select->close();
 
@@ -52,11 +52,11 @@
 			$school_select->execute();
 			$school_select->bind_result($school);
 			if($school_select->fetch()){
-				echo "<tr><td>College:</td><td>$school</td></tr>";
+				$infoList["partner_school"] = $school;
 			} else{
 				echo 'nay';
 			}
-			$infoList["partner_school"] = $school;
+			
 			$school_select->free_result();
 			$school_select->close();
 
@@ -66,11 +66,11 @@
 			$phone_select->execute();
 			$phone_select->bind_result($phonenumber);
 			if($phone_select->fetch()){
-				echo "<tr><td>Phone Number:</td><td>$phonenumber</td></tr>";
+				$infoList["partner_phonenumber"] = $phonenumber;
 			} else{
 				echo 'nay';
 			}
-			$infoList["partner_phonenumber"] = $phonenumber;
+			
 			$phone_select->free_result();
 			$phone_select->close();
 
@@ -79,11 +79,11 @@
 			$email_select->execute();
 			$email_select->bind_result($email);
 			if($email_select->fetch()){
-				echo "<tr><td>Email:</td><td>$email</td></tr>";
+				$infoList["partner_email"] = $email;
 			} else{
 				echo 'nay';
 			}
-			$infoList["partner_email"] = $email;
+			
 			$email_select->free_result();
 			$email_select->close();	
 

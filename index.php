@@ -6,7 +6,7 @@
 		$controller = $_GET['controller'];
 		$action     = $_GET['action'];
 	} else {
-		$controller = 'checklist';
+		$controller = 'partnerInfo';
 		$action     = 'list';
 	}
 	require_once('view/layout.php');

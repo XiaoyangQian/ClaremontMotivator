@@ -3,8 +3,8 @@
 			
 			<table>
 			<?php
-				foreach($infolist as $key => $value){
-					echo '<tr><td>$key</td><td>$value</td></tr>';
+				foreach($infoList as $key => $value){
+					echo '<tr><td>'. $key. ':    </td><td>' . $value. '</td></tr>';
 				}
 			?>
 			</table>
