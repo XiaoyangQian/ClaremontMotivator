@@ -8,6 +8,13 @@
 				}
 			?>
 			</table>
-			<a href="./mainChecklist.php" class="btn btn-primary" role="button">Continue!</a>
+			<?php
+			$controller = 'checklist';
+			$action = 'action';
+			$_GET['controller'] = 'checklist';
+			$_GET['action'] = 'list';
+
+			?>
+			<a href="./routes.php" class="btn btn-primary" role="button">Continue!</a>
 
 </div>
