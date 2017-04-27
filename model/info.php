@@ -1,7 +1,5 @@
 <?php
 
-require_once "base_model.php";
-
 class InfoRow extends BaseModel
 {
 

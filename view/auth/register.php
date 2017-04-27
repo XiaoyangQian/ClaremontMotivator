@@ -1,17 +1,3 @@
-<html>
-
-<head>
-    <title>Motivator Register</title>
-    <link rel='stylesheet' type='text/css' href='/css/bootstrap.min.css'>
-    <script src="/js/libs/jquery.js"></script>
-    <script src="/js/libs/bootstrap.min.js"></script>
-    <script src="/js/registervalidate.js"></script>
-</head>
-
-<body>
-
-</body>
-
 <form class="form-inline" action="register.php" method="POST" onsubmit="return validatePassword()">
 
     <fieldset>
@@ -48,22 +34,22 @@
 </form>
 
 <?php
-$firstname = $_POST['firstname'];
-$lastname = $_POST['lastname'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-//$passwordHash = password_hash($password, PASSWORD_DEFAULT);
-
-
-
-$cInsert = mysqli_prepare($dbc, "insert into Users (firstname,lastname,password)  VALUES (?,?,?)");
-mysqli_stmt_bind_param($cInsert, "sss", $firstname, $lastname, $password);
-mysqli_stmt_execute($cInsert);
-$cid = mysqli_stmt_insert_id($cInsert);
-$_SESSION["cid"] = $cid;
-mysqli_stmt_close($cInsert);
-
-?>
-
-
-</html>
+//$firstname = $_POST['firstname'];
+//$lastname = $_POST['lastname'];
+//$email = $_POST['email'];
+//$password = $_POST['password'];
+////$passwordHash = password_hash($password, PASSWORD_DEFAULT);
+//
+//
+//
+//$cInsert = mysqli_prepare($dbc, "insert into Users (firstname,lastname,password)  VALUES (?,?,?)");
+//mysqli_stmt_bind_param($cInsert, "sss", $firstname, $lastname, $password);
+//mysqli_stmt_execute($cInsert);
+//$cid = mysqli_stmt_insert_id($cInsert);
+//$_SESSION["cid"] = $cid;
+//mysqli_stmt_close($cInsert);
+//
+//?>
+<!---->
+<!---->
+<!--</html>-->

@@ -6,7 +6,7 @@ class BaseModel
     {
         // exported by dbconn.php
         global $dbc;
-        $this->dbc = $dbc;
+        $this->dbc = &$dbc;
     }
 
 }

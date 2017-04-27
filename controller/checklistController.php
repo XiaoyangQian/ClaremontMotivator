@@ -1,11 +1,12 @@
 <?php
 
-class ChecklistController
+class ChecklistController extends BaseController
 {
     public function ls()
     {
         $tasklist = Taskrow::getAllTasks();
-        require_once('view/checklist/checklistView.php');
+        $this->setViewParam('tasklist', $tasklist);
+        $this->renderView('/view/checklist/checklistView.php');
     }
 }
 

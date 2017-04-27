@@ -3,11 +3,11 @@
 
     <table>
         <?php
-        foreach ($infoList as $key => $value) {
+        global $view_params;
+        foreach ($view_params['infolist'] as $key => $value) {
             echo '<tr><td>' . $key . ':    </td><td>' . $value . '</td></tr>';
         }
         ?>
     </table>
-    <a href="/view/mainChecklist.php" class="btn btn-primary" role="button">Continue!</a>
-
+    <a href="/view/checklist/main.php" class="btn btn-primary" role="button">Continue!</a>
 </div>

@@ -1,23 +1,3 @@
-<html>
-<head>
-    <title>Motivator Checklist</title>
-    <link rel='stylesheet' type='text/css' href='/css/bootstrap.min.css'>
-    <script src="/js/libs/jquery.js"></script>
-    <script src="/js/libs/bootstrap.min.js"></script>
-    <script src="/js/registervalidate.js"></script>
-</head>
-
-<body>
-
-</body>
-<!-- Topic section -->
-<div class="jumbotron text-center">
-    <!-- Embedded Styling -->
-    <h1 style="font-size: 40pt">Claremont Motivator</h1>
-    <p>Let's put procrastination to a stop...</p>
-</div>
-
-<!-- <form class="form-horizontal" role="form" method="post"> -->
 <table class="table">
     <thead>
     <tr>
@@ -74,5 +54,3 @@
     ?>
     </tbody>
 </table>
-<!-- </form>	 -->
-</html>

@@ -5,13 +5,10 @@ function call($controller, $action)
     require_once('controller/' . $controller . 'Controller.php');
 
     if ($controller == 'checklist') {
-        require_once('model/task.php');
         $controller = new ChecklistController();
     } else if ($controller == 'partnerInfo') {
-        require_once('model/info.php');
         $controller = new PartnerInfoController();
     } else if ($controller == 'match') {
-        require_once('model/match.php');
         $controller = new MatchController();
     }
 
@@ -29,6 +26,11 @@ function ResolveRoute($controller, $action)
         $action = 'ls';
     }
 
+    function showError()
+    {
+        (new BaseController())->renderView('/message/error.php');
+    }
+
     // just a list of the controllers we have and their actions
     // we consider those "allowed" values
     $controllers = array('checklist' => ['ls'], 'partnerInfo' => ['ls'], 'match' => ['direct']);
@@ -39,9 +41,9 @@ function ResolveRoute($controller, $action)
         if (in_array($action, $controllers[$controller])) {
             call($controller, $action);
         } else {
-            call('checklist', 'error');
+            showError();
         }
     } else {
-        call('checklist', 'error');
+        showError();
     }
 }

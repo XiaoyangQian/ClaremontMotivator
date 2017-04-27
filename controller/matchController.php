@@ -1,6 +1,6 @@
 <?php
 
-class MatchController
+class MatchController extends BaseController
 {
     private function isOdd()
     {
@@ -10,10 +10,10 @@ class MatchController
     public function direct()
     {
         if ($this->isOdd()) {
-            require_once('view/notMatchedView.php');
+            require_once('view/message/matchPending.php');
         } else {
             matchStatus::update();
-            require_once('view/partnerInfoView.php');
+            require_once('view/message/matchSuccessful.php');
         }
     }
 }

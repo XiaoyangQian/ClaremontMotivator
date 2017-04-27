@@ -21,7 +21,7 @@
 		// (such as Node.js), expose a jQuery-making factory as module.exports
 		// This accentuates the need for the creation of a real window
 		// e.g. var jQuery = require("jquery")(window);
-		// See ticket #14549 for more info
+		// See ticket #14549 for more message
 		module.exports = global.document ?
 			factory( global, true ) :
 			function( w ) {
@@ -5184,7 +5184,7 @@ jQuery.fn.extend({
 		if ( one === 1 ) {
 			origFn = fn;
 			fn = function( event ) {
-				// Can use an empty set, since event contains the info
+				// Can use an empty set, since event contains the message
 				jQuery().off( event );
 				return origFn.apply( this, arguments );
 			};
@@ -6779,7 +6779,7 @@ jQuery.each([ "height", "width" ], function( i, name ) {
 	jQuery.cssHooks[ name ] = {
 		get: function( elem, computed, extra ) {
 			if ( computed ) {
-				// certain elements can have dimension info if we invisibly show them
+				// certain elements can have dimension message if we invisibly show them
 				// however, it must have a current display style that would benefit from this
 				return elem.offsetWidth === 0 && rdisplayswap.test( jQuery.css( elem, "display" ) ) ?
 					jQuery.swap( elem, cssShow, function() {

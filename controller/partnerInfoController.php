@@ -1,12 +1,12 @@
 <?php
 
-class PartnerInfoController
+class PartnerInfoController extends BaseController
 {
     public function ls()
     {
         $infoList = (new InfoRow())->getInfo();
-        require_once('view/partnerInfoView.php');
+        $this->setViewParam('title', "Partner Info");
+        $this->setViewParam('infolist', $infoList);
+        $this->renderView('/view/message/matchSuccessful.php');
     }
 }
-
-?>
