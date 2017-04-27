@@ -1,11 +1,12 @@
 <?php
 
-function connect_to_db($dbname)
+function connect_to_db()
 {
-
+    $db_config = [];
+    require_once "db.config.php";
     // Usage: host, login, pass, db name
     // Change the host, login, and db information as appropriate
-    $dbc = @mysqli_connect("localhost", "root", "root", $dbname) or
+    $dbc = @mysqli_connect($db_config["host"], $db_config["login"], $db_config["pass"], $db_config["db_name"]) or
     die("Connect failed: " . mysqli_connect_error());
 
     return $dbc;

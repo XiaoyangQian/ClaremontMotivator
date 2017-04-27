@@ -33,7 +33,7 @@
 if ($_SERVER['REQUEST_METHOD'] == "GET") {
 
 } else {
-    $dbc = connect_to_db("motivator");
+    $dbc = connect_to_db();
     $psw_select = $dbc->prepare("SELECT password FROM users 
 							WHERE user_id=$_POST['password']");
 	$result = password_verify($psw_select, $_POST['password']);

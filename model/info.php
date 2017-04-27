@@ -5,7 +5,7 @@ class InfoRow
     public static function getInfo()
     {
         $infoList = array();
-        $dbc = connect_to_db("motivator");
+        $dbc = connect_to_db();
 
         $user_id = 1;
 

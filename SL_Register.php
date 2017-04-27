@@ -57,7 +57,7 @@ $password = $_POST['password'];
 //$passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
 
-$dbc = connect_to_db("motivator");
+$dbc = connect_to_db();
 
 $cInsert = mysqli_prepare($dbc, "insert into Users (firstname,lastname,password)  VALUES (?,?,?)");
 mysqli_stmt_bind_param($cInsert, "sss", $firstname, $lastname, $password);
