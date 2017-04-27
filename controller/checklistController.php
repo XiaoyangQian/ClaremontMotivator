@@ -1,8 +1,12 @@
 <?php
-	class ChecklistController {
-		public function list() {
-			$tasklist = Taskrow::getAllTasks();
-			require_once('view/checklist/checklistView.php');
-		}
-	}
+
+class ChecklistController
+{
+    public function ls()
+    {
+        $tasklist = Taskrow::getAllTasks();
+        require_once('view/checklist/checklistView.php');
+    }
+}
+
 ?>
