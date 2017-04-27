@@ -1,4 +1,6 @@
-
+<?php
+	include "dbconn.php";
+?><!DOCTYPE html>
 <html>
 	<head>
 		<title>Partner Matched!</title>
@@ -100,4 +102,4 @@
 
 		</div>
 	</body>
-	</html>
+</html>
