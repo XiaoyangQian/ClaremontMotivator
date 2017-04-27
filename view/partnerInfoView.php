@@ -8,6 +8,6 @@
         }
         ?>
     </table>
-    <a href="./mainChecklist.php" class="btn btn-primary" role="button">Continue!</a>
+    <a href="/view/mainChecklist.php" class="btn btn-primary" role="button">Continue!</a>
 
 </div>

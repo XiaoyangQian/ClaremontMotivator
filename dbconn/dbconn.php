@@ -29,4 +29,10 @@ function perform_query($dbc, $query)
     return $result;
 }
 
-?>
+// sets the global variable $dbc
+$dbc = connect_to_db();
+
+// usage:
+// ```php
+// global $dbc;
+// ```

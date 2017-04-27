@@ -1,6 +1,6 @@
 <?php
 // entry point for site
-require_once('dbconn.php');
+require_once('dbconn/dbconn.php');
 
 if (isset($_GET['controller']) && isset($_GET['action'])) {
     $controller = $_GET['controller'];
@@ -10,4 +10,3 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
     $action = 'ls';
 }
 require_once('view/layout.php');
-?>

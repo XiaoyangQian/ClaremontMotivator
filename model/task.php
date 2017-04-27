@@ -16,7 +16,6 @@ class Taskrow
     public static function getAllTasks()
     {
         $tasklist = [];
-        $dbc = connect_to_db();
         // [TODO] switch to get later
         $user_id = 1;
         // Find pair id
@@ -57,5 +56,3 @@ class Taskrow
         return $tasklist;
     }
 }
-
-?>

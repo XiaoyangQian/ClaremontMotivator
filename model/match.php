@@ -4,7 +4,6 @@ class MatchStatus
 {
     public static function isOdd()
     {
-        $dbc = connect_to_db();
         $count_select = $dbc->prepare("SELECT COUNT(*) FROM users");
         $count_select->execute();
         $count_select->bind_result($num_users);
@@ -25,7 +24,6 @@ class MatchStatus
 
     public static function update()
     {
-        $dbc = connect_to_db();
 
         $first_select = $dbc->prepare("SELECT user_id FROM users WHERE partner_id IS NULL LIMIT 1");
         $first_select->execute();
@@ -63,27 +61,3 @@ class MatchStatus
 
     }
 }
-
-?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

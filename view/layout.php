@@ -1,9 +1,10 @@
 <html>
 <head>
     <title>Motivator Checklist</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <link rel='stylesheet' type='text/css' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <script src="/js/libs/jquery.js"></script>
+    <script src="/js/libs/bootstrap.min.js"></script>
+    <link rel='stylesheet' type='text/css' href='/css/bootstrap.min.css'>
+    <script src="/js/registervalidate.js"></script>
 </head>
 
 <body>

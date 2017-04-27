@@ -1,13 +1,12 @@
+<?php
+?><!DOCTYPE html>
 <html>
 <head>
     <title>Partner Matched!</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' type='text/css' href='/css/bootstrap.min.css'>
+    <script src="/js/libs/jquery.js"></script>
+    <script src="/js/libs/bootstrap.min.js"></script>
+    <script src="/js/registervalidate.js"></script>
 </head>
 <body>
 <div class="container">
@@ -15,8 +14,6 @@
 
     <table>
         <?php
-        include("dbconn.php");
-        $dbc = connect_to_db();
         // [TODO] switch to get later
         $user_id = 1;
         $partner_select = $dbc->prepare("SELECT partner_id FROM users 
@@ -95,7 +92,7 @@
         $email_select->close();
         ?>
     </table>
-    <a href="./mainChecklist.php" class="btn btn-primary" role="button">Continue!</a>
+    <a href="mainChecklist.php" class="btn btn-primary" role="button">Continue!</a>
 
 </div>
 </body>

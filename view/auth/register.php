@@ -2,18 +2,17 @@
 
 <head>
     <title>Motivator Register</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <link rel='stylesheet' type='text/css' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-
-    <script src="registervalidate.js"></script>
+    <link rel='stylesheet' type='text/css' href='/css/bootstrap.min.css'>
+    <script src="/js/libs/jquery.js"></script>
+    <script src="/js/libs/bootstrap.min.js"></script>
+    <script src="/js/registervalidate.js"></script>
 </head>
 
 <body>
 
 </body>
 
-<form class="form-inline" action="SL_Register.php" method="POST" onsubmit="return validatePassword()">
+<form class="form-inline" action="register.php" method="POST" onsubmit="return validatePassword()">
 
     <fieldset>
         <div>
@@ -49,7 +48,6 @@
 </form>
 
 <?php
-include "./dbconn.php";
 $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
 $email = $_POST['email'];
@@ -57,7 +55,6 @@ $password = $_POST['password'];
 //$passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
 
-$dbc = connect_to_db();
 
 $cInsert = mysqli_prepare($dbc, "insert into Users (firstname,lastname,password)  VALUES (?,?,?)");
 mysqli_stmt_bind_param($cInsert, "sss", $firstname, $lastname, $password);

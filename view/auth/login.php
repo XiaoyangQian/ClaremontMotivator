@@ -2,12 +2,13 @@
 
 <head>
     <title>Motivator Register</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <link rel='stylesheet' type='text/css' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' href='/css/bootstrap.min.css'>
+    <script src="/js/libs/jquery.js"></script>
+    <script src="/js/libs/bootstrap.min.js"></script>
+    <script src="/js/registervalidate.js"></script>
 </head>
 
-<form action="mainChecklist.php" method="POST">
+<form action="../mainChecklist.php" method="POST">
     <div>
         <label><b>first name</b></label>
         <input type="text" placeholder="Enter first name" name="firstname" required>
@@ -33,7 +34,6 @@
 if ($_SERVER['REQUEST_METHOD'] == "GET") {
 
 } else {
-    $dbc = connect_to_db();
     $psw_select = $dbc->prepare("SELECT password FROM users 
 							WHERE user_id=$_POST['password']");
 	$result = password_verify($psw_select, $_POST['password']);
