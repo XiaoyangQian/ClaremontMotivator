@@ -9,10 +9,28 @@ class AuthController extends BaseController
 
     public function post_login()
     {
+        $user = User::findFirst([
+            'firstname' => $_POST['firstname'],
+            'lastname' => $_POST['lastname']
+        ]);
 
-//        $psw_select = $dbc->prepare("SELECT password FROM users
-//							WHERE user_id=$_POST['password']");
-//	$result = password_verify($psw_select, $_POST['password']);
-//	$success = ($result) ? 'True' : 'False';
+        if (!$user)
+            $this->showErrorAndTerminate("User not found!");
+
+        if (!password_verify($_POST['password'], $user['password']))
+            $this->showErrorAndTerminate("Wrong password!");
+
+
+        $_SESSION['user'] = $user;
+        $_SESSION['message'] = "Logged in successfully";
+        $this->redirect('PartnerInfo', 'ls');
     }
+
+    public function logout()
+    {
+        unset($_SESSION['user']);
+        $_SESSION['message'] = "Logged out successfully";
+        $this->redirect('auth', 'login');
+    }
+
 }

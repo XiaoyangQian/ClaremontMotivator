@@ -19,11 +19,11 @@ function call($controller, $action)
 
 function ResolveRoute($controller, $action)
 {
+    session_start();
     if (!$controller && !$action) {
         // default route
         $controller = 'PartnerInfo';
         $action = 'ls';
     }
-
     call($controller, $action);
 }
