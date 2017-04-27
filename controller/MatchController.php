@@ -10,12 +10,10 @@ class MatchController extends BaseController
     public function direct()
     {
         if ($this->isOdd()) {
-            require_once('view/message/matchPending.php');
+            require_once('message/matchPending');
         } else {
             matchStatus::update();
-            require_once('view/message/matchSuccessful.php');
+            require_once('message/matchSuccessful');
         }
     }
 }
-
-?>

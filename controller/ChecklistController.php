@@ -6,8 +6,6 @@ class ChecklistController extends BaseController
     {
         $tasklist = Taskrow::getAllTasks();
         $this->setViewParam('tasklist', $tasklist);
-        $this->renderView('/view/checklist/checklistView.php');
+        $this->renderView('checklist/checklistView');
     }
 }
-
-?>

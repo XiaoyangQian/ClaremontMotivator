@@ -29,7 +29,7 @@ class BaseController
 
         // render $template_file_path to global variable $content_html
         ob_start();
-        require $template_file_path;
+        require '/view/' . $template_file_path . '.php';
         global $content_html;
         $content_html = ob_get_clean();
 
@@ -43,5 +43,15 @@ class BaseController
 
         // render and show BASE_VIEW
         require $this->BASE_VIEW_PATH;
+    }
+
+    protected function requiresLogin()
+    {
+        // checks log in state, if not logged in, redirect to log in page.
+        session_start();
+        if (!$_SESSION['user_id']) {
+            header('Location: /?controller=auth&action=login');
+            die();
+        }
     }
 }
