@@ -4,7 +4,7 @@ class PartnerInfoController
 {
     public function ls()
     {
-        $infoList = InfoRow::getInfo();
+        $infoList = (new InfoRow())->getInfo();
         require_once('view/partnerInfoView.php');
     }
 }

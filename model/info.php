@@ -1,14 +1,17 @@
 <?php
 
-class InfoRow
+require_once "base_model.php";
+
+class InfoRow extends BaseModel
 {
-    public static function getInfo()
+
+    public function getInfo()
     {
         $infoList = array();
 
         $user_id = 1;
 
-        $partner_select = $dbc->prepare("SELECT partner_id FROM users 
+        $partner_select = $this->dbc->prepare("SELECT partner_id FROM users 
 													WHERE user_id=?");
         $partner_select->bind_param("i", $user_id);
         $partner_select->execute();
@@ -23,7 +26,7 @@ class InfoRow
         $partner_select->free_result();
         $partner_select->close();
 
-        $fname_select = $dbc->prepare("SELECT firstname FROM users WHERE user_id=?");
+        $fname_select = $this->dbc->prepare("SELECT firstname FROM users WHERE user_id=?");
         $fname_select->bind_param("i", $partner_id);
         $fname_select->execute();
         $fname_select->bind_result($firstname);
@@ -36,7 +39,7 @@ class InfoRow
         $fname_select->free_result();
         $fname_select->close();
 
-        $lname_select = $dbc->prepare("SELECT lastname FROM users WHERE user_id=?");
+        $lname_select = $this->dbc->prepare("SELECT lastname FROM users WHERE user_id=?");
         $lname_select->bind_param("i", $partner_id);
         $lname_select->execute();
         $lname_select->bind_result($lastname);
@@ -49,7 +52,7 @@ class InfoRow
         $lname_select->free_result();
         $lname_select->close();
 
-        $school_select = $dbc->prepare("SELECT school FROM users WHERE user_id=?");
+        $school_select = $this->dbc->prepare("SELECT school FROM users WHERE user_id=?");
         $school_select->bind_param("i", $partner_id);
         $school_select->execute();
         $school_select->bind_result($school);
@@ -63,7 +66,7 @@ class InfoRow
         $school_select->close();
 
 
-        $phone_select = $dbc->prepare("SELECT phonenumber FROM users WHERE user_id=?");
+        $phone_select = $this->dbc->prepare("SELECT phonenumber FROM users WHERE user_id=?");
         $phone_select->bind_param("i", $partner_id);
         $phone_select->execute();
         $phone_select->bind_result($phonenumber);
@@ -76,7 +79,7 @@ class InfoRow
         $phone_select->free_result();
         $phone_select->close();
 
-        $email_select = $dbc->prepare("SELECT email FROM users WHERE user_id=?");
+        $email_select = $this->dbc->prepare("SELECT email FROM users WHERE user_id=?");
         $email_select->bind_param("i", $partner_id);
         $email_select->execute();
         $email_select->bind_result($email);
