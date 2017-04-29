@@ -1,55 +1,58 @@
 <form class="form-inline" action="register.php" method="POST" onsubmit="return validatePassword()">
 
-    <fieldset>
-        <div>
-            <div class="form-group">
-                <label><b>First Name</b></label> <br>
-                <input type="text" class="form-control" placeholder="Enter firstname" name="firstname" required>
-                <br>
-            </div>
-
-            <div class="form-group">
-                <label><b>Last Name</b></label><br>
-                <input type="text" placeholder="Enter lastname" name="lastname" required><br>
-            </div>
-
-            <div class="form-group">
-                <label><b>Email</b></label><br>
-                <input type="email" placeholder="Enter Your Email" name="email" required><br>
-            </div>
-
-            <div class="form-group">
-                <label><b>Password</b></label><br>
-                <input type="password" placeholder="Enter Password" name="password" required><br>
-            </div>
-
-            <div class="form-group">
-                <label><b>Repeat Password</b></label><br>
-                <input type="password" placeholder="Repeat Password" name="repeatpassword" required><br>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Register</button>
+    <div class="form-group">
+        <label for="firstName" class="col-sm-2 control-label">First Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="firstName" required name="firstname">
         </div>
-    </fieldset>
+    </div>
+
+    <div class="form-group">
+        <label for="lastName" class="col-sm-2 control-label">Last Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="lastName" required name="lastname">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="Email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="Email" required name="email">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="Password" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="password" required name="password">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="RepeatPassword" class="col-sm-2 control-label">Repeat Password</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="repeatpassword" name="repeatpassword" required>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
+            <button type="submit" class="btn btn-primary">Register</button>
+            <a href="<?= get_link('auth', 'login') ?>" class="btn btn-default">Go Back</a>
+        </div>
+    </div>
+
 </form>
 
-<?php
-//$firstname = $_POST['firstname'];
-//$lastname = $_POST['lastname'];
-//$email = $_POST['email'];
-//$password = $_POST['password'];
-////$passwordHash = password_hash($password, PASSWORD_DEFAULT);
-//
-//
-//
-//$cInsert = mysqli_prepare($dbc, "insert into Users (firstname,lastname,password)  VALUES (?,?,?)");
-//mysqli_stmt_bind_param($cInsert, "sss", $firstname, $lastname, $password);
-//mysqli_stmt_execute($cInsert);
-//$cid = mysqli_stmt_insert_id($cInsert);
-//$_SESSION["cid"] = $cid;
-//mysqli_stmt_close($cInsert);
-//
-//?>
-<!---->
-<!---->
-<!--</html>-->
+<script>
+    function validatePassword() {
+        var password = document.getElementById("password")
+            , repeatpassword = document.getElementById("repeatpassword");
+        if (password.value !== repeatpassword.value) {
+            alert("Passwords Don't Match");
+            return false;
+        }
+        return true;
+    }
+</script>
