@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 *.DS_Store
 .AppleDouble
 .LSOverride
+=======
+.DS_Store
+.AppleDouble
+.LSOverride
+.idea
+dbconn/db.config.php
+
+>>>>>>> 3843066bf7482b27d17ad6e925af8ca4c022f38d
 
 # Icon must end with two \r
 Icon
