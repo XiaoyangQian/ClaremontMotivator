@@ -1,15 +1,18 @@
 <?php
+//mysqli_report(MYSQLI_REPORT_ALL);
 
 class BaseModel
 {
-    function __construct($object =null)
+    private $dbc;
+
+    function __construct($object = null)
     {
         // exported by dbconn.php
         global $dbc;
         $this->dbc = &$dbc;
-        if($object){
-            foreach($object as $property => $value){
-                $this->$property =$value;
+        if ($object) {
+            foreach ($object as $property => $value) {
+                $this->$property = $value;
             }
         }
     }
@@ -22,7 +25,7 @@ class BaseModel
 
     public static function find($id)
     {
-        $primaryKey=@self::getStaticPropertyOfChildClass('primaryKey') or 'id';
+        $primaryKey = @self::getStaticPropertyOfChildClass('primaryKey') or 'id';
         return @self::findFirst([$primaryKey => $id]);
     }
 
@@ -62,15 +65,15 @@ class BaseModel
 
         $statement->execute();
         return array_map(
-            function($item){
-                $class=get_called_class();
+            function ($item) {
+                $class = get_called_class();
                 return new $class($item);
             },
             $statement->get_result()->fetch_all(MYSQLI_ASSOC)
         );
     }
 
-     public function save()
+    public function save()
     {
         $tableName = self::getStaticPropertyOfChildClass('table');
         $primaryKey = @self::getStaticPropertyOfChildClass('primaryKey') or 'id';
