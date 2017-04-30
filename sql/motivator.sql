@@ -54,4 +54,3 @@ INSERT INTO ProgramSegments (program_id, user_id, day_id, finished, title) VALUE
 INSERT INTO ProgramSegments (program_id, user_id, day_id, finished, title) VALUES (1, 2, 4, FALSE, 'CS');
 INSERT INTO ProgramSegments (program_id, user_id, day_id, finished, title) VALUES (1, 2, 5, FALSE, 'be productive');
 INSERT INTO ProgramSegments (program_id, user_id, day_id, finished, title) VALUES (1, 2, 6, FALSE, 'not be productive');
-

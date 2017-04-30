@@ -9,7 +9,11 @@
 .idea
 dbconn/db.config.php
 
+<<<<<<< HEAD
 >>>>>>> 3843066bf7482b27d17ad6e925af8ca4c022f38d
+=======
+>>>>>>> origin/master
+>>>>>>> 3740198f96fdbb0062104787802306a1dcfdc9ef
 
 # Icon must end with two \r
 Icon
