@@ -1,9 +1,15 @@
+<<<<<<< HEAD
+*.DS_Store
+.AppleDouble
+.LSOverride
+=======
 .DS_Store
 .AppleDouble
 .LSOverride
 .idea
 dbconn/db.config.php
 
+>>>>>>> origin/master
 
 # Icon must end with two \r
 Icon
